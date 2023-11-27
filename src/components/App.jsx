@@ -4,6 +4,7 @@ import Label from './Label';
 import Form from './Form';
 import Main from './Main';
 import Page from './Page';
+import '../styles/reset.css';
 
 const App = () => (
   <Page>
