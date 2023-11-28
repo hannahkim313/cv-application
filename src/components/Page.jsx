@@ -4,7 +4,9 @@ const Page = ({ children }) => (
       <h1>CV Builder</h1>
     </header>
     <main>{children}</main>
-    <footer>Hannah Kim</footer>
+    <footer>
+      <a href="https://github.com/hannahkim313">Created by Hannah Kim</a>
+    </footer>
   </>
 );
 

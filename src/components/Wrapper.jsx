@@ -1,3 +1,5 @@
-const Wrapper = ({ children }) => <div>{children}</div>;
+const Wrapper = ({ className, children }) => (
+  <div className={className}>{children}</div>
+);
 
 export default Wrapper;
