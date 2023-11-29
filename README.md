@@ -7,3 +7,4 @@ This project exercise, created by The Odin Project, is a CV builder to practice 
 ## Credits
 
 - Flaticon icon from [Freepik](https://www.freepik.com/icon/cv_3135692)
+- Miscellaneous icons from [Google Fonts](https://fonts.google.com/)
