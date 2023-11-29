@@ -1,5 +1,10 @@
-import Button from './Button';
-import Wrapper from './Wrapper';
+import PreviousButton from './PreviousButton';
+import NextButton from './NextButton';
+import NavButtons from './NavButtons';
+import Field from './Field';
+import Fields from './Fields';
+import Card from './Card';
+import AddButton from './AddButton';
 import Input from './Input';
 import Label from './Label';
 import Form from './Form';
@@ -9,46 +14,106 @@ import '../styles/main.css';
 
 const App = () => (
   <Page>
-    <Form title="Personal Details">
-      <Wrapper className="fields">
-        <Wrapper className="field-wrapper">
+    <Form title="Personal Details" className="personal-details">
+      <Fields>
+        <Field>
           <Label id="first-name" text="First name" />
           <Input type="text" id="first-name" />
-        </Wrapper>
-        <Wrapper className="field-wrapper">
+        </Field>
+        <Field>
           <Label id="last-name" text="Last name" />
           <Input type="text" id="last-name" />
-        </Wrapper>
-      </Wrapper>
-      <Wrapper className="fields">
-        <Wrapper className="field-wrapper">
+        </Field>
+      </Fields>
+      <Fields>
+        <Field>
           <Label
             id="phone-number"
             text="Phone number"
-            formatText="Format: 123-456-7890"
+            subText="Format: 123-456-7890"
           />
           <Input
             type="tel"
             id="phone-number"
             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           />
-        </Wrapper>
-        <Wrapper className="field-wrapper">
+        </Field>
+        <Field>
           <Label
             id="user-email"
             text="Email address"
-            formatText="Format: johndoe@gmail.com"
+            subText="Format: johndoe@gmail.com"
           />
           <Input type="email" id="user-email" pattern=".+@example\.com" />
-        </Wrapper>
-      </Wrapper>
-      <Wrapper className="field-wrapper">
+        </Field>
+      </Fields>
+      <Field>
         <Label id="summary" text="Summary" />
         <textarea id="summary" name="summary" rows="5" cols="30" required />
-      </Wrapper>
-      <Wrapper className="nav-buttons">
-        <Button text="Next" />
-      </Wrapper>
+      </Field>
+      <NavButtons>
+        <NextButton />
+      </NavButtons>
+    </Form>
+    <Form title="Professional Experience" className="professional-experience">
+      <Card title="Experience 1">
+        <Fields>
+          <Field>
+            <Label id="employer" text="Employer" />
+            <Input type="text" id="employer" />
+          </Field>
+          <Field>
+            <Label id="job-title" text="Role or Job title" />
+            <Input type="text" id="job-title" />
+          </Field>
+        </Fields>
+        <Fields>
+          <Field>
+            <Label
+              id="start-date"
+              text="Start date"
+              subText="Format: M/YYYY or MM/YYYY"
+            />
+            <Input
+              type="text"
+              id="start-date"
+              pattern="(?:^|[^\/\d])\K(?:0?[1-9]|1[0-2])\/\d{4}\b"
+            />
+          </Field>
+          <Field>
+            <Label
+              id="end-date"
+              text="End date"
+              subText="Format: M/YYYY or MM/YYYY"
+            />
+            <Input
+              type="text"
+              id="end-date"
+              pattern="(?:^|[^\/\d])\K(?:0?[1-9]|1[0-2])\/\d{4}\b"
+            />
+          </Field>
+        </Fields>
+        <fieldset>
+          <legend>What were your responsibilities and accomplishments?</legend>
+          <Field>
+            <Label id="responsibility1" text="Bullet point 1" />
+            <Input type="text" id="responsibility1" />
+          </Field>
+          <Field>
+            <Label id="responsibility2" text="Bullet point 2" />
+            <Input type="text" id="responsibility2" />
+          </Field>
+          <Field>
+            <Label id="responsibility3" text="Bullet point 3" />
+            <Input type="text" id="responsibility3" />
+          </Field>
+        </fieldset>
+      </Card>
+      <AddButton text="Add experience" />
+      <NavButtons>
+        <PreviousButton />
+        <NextButton />
+      </NavButtons>
     </Form>
   </Page>
 );

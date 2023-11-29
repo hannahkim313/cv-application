@@ -1,13 +1,11 @@
-import Wrapper from './Wrapper';
-
-const Label = ({ id, text, formatText = '' }) => (
+const Label = ({ id, text, subText = '' }) => (
   <>
-    {formatText === '' && <label htmlFor={id}>{text}</label>}
-    {formatText !== '' && (
-      <Wrapper>
+    {subText === '' && <label htmlFor={id}>{text}</label>}
+    {subText !== '' && (
+      <div>
         <label htmlFor={id}>{text}</label>
-        <p>{formatText}</p>
-      </Wrapper>
+        <p>{subText}</p>
+      </div>
     )}
   </>
 );

@@ -1,6 +1,6 @@
-const Button = ({ imgProps, text = '', hasImg = false }) => (
-  <button type="button">
-    {hasImg && <img src={imgProps.src} alt={imgProps.alt} />}
+const Button = ({ src = '', alt = '', text, className }) => (
+  <button type="button" className={className}>
+    {src !== '' && <img src={src} alt={alt} />}
     {text}
   </button>
 );
