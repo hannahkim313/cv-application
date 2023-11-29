@@ -6,6 +6,7 @@
   --color-text-1: #20384a;
   --color-text-1-inverted: #ffffff;
   --color-brand-1: #407093;
+  --color-brand-1a: #2e506a;
   --color-brand-2: #e4f6ff;
   --color-brand-2a: #0092cc;
   --color-brand-3: #ffe07d;
@@ -191,6 +192,11 @@ textarea:focus-visible {
   padding: 0.2rem 0.6rem;
   background-color: var(--color-text-1);
   border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: var(--color-brand-1a);
 }
 
 .nav-buttons button:focus-visible {
@@ -219,7 +225,7 @@ footer a {
 }
 
 footer a:focus-visible {
-  outline: 1px solid var_(--color-text-1-inverted);
+  outline: 1px solid var(--color-text-1-inverted);
 }
 
 /******************************************************************************/
