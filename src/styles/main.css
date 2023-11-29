@@ -67,16 +67,64 @@ main {
 /******************************************************************************/
 
 form {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 55px var(--color-neutral-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+form:not(.personal-details) {
+  display: none;
+}
+
+h2 {
+  text-align: center;
+}
+
+.card {
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0px 5px 15px var(--color-neutral-2);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  gap: 2rem;
 }
 
-h2 {
-  text-align: center;
+.card > :first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expand-more {
+  background-color: var(--color-text-1-inverted);
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.expand-more:hover {
+  background-color: var(--color-neutral-1);
+}
+
+.expand-more img {
+  width: 1.5rem;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset label {
+  font-size: 0.8rem;
+}
+
+legend {
+  padding-bottom: 0.5rem;
 }
 
 .fields {
@@ -109,6 +157,22 @@ input:focus-visible,
 textarea:focus-visible {
   border-bottom: 5px solid var(--color-brand-2a);
   outline: none;
+}
+
+.add-button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.add-button:hover {
+  background: var(--color-neutral-2);
+}
+
+.add-button img {
+  width: 1.5rem;
 }
 
 .nav-buttons:has(:nth-child(1)) {
