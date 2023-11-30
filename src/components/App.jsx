@@ -1,4 +1,3 @@
-import PreviousButton from './PreviousButton';
 import NextButton from './NextButton';
 import NavButtons from './NavButtons';
 import Field from './Field';
