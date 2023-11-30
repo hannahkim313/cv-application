@@ -111,6 +111,35 @@ const App = () => (
         </Card>
         <AddButton text="Add experience" />
       </Tab>
+      <Tab title="Education" className="education">
+        <Card title="Education 1">
+          <Fields>
+            <Field>
+              <Label id="school" text="School" />
+              <Input type="text" id="school" />
+            </Field>
+            <Field>
+              <Label id="field-of-study" text="Field of study" />
+              <Input type="text" id="field-of-study" />
+            </Field>
+          </Fields>
+          <Fields>
+            <Field>
+              <Label
+                id="grad-date"
+                text="Graduation date"
+                subText="Format: M/YYYY or MM/YYYY"
+              />
+              <Input
+                type="text"
+                id="grad-date"
+                pattern="(?:^|[^\/\d])\K(?:0?[1-9]|1[0-2])\/\d{4}\b"
+              />
+            </Field>
+          </Fields>
+          <AddButton text="Add education" />
+        </Card>
+      </Tab>
       <NavButtons>
         <PreviousButton />
         <NextButton />
