@@ -141,7 +141,6 @@ const App = () => (
         </Card>
       </Tab>
       <NavButtons>
-        <PreviousButton />
         <NextButton />
       </NavButtons>
     </form>
