@@ -1,3 +1,5 @@
+import Preview from './Preview';
+import EditButton from './EditButton';
 import NextButton from './NextButton';
 import NavButtons from './NavButtons';
 import Field from './Field';
@@ -14,7 +16,7 @@ import '../styles/main.css';
 const App = () => (
   <Page>
     <form action="" method="post">
-      <Tab title="Personal Details" className="personal-details">
+      <Tab title="Personal Details" className="personal-details active">
         <Fields>
           <Field>
             <Label id="first-name" text="First name" />
@@ -143,6 +145,12 @@ const App = () => (
         <NextButton />
       </NavButtons>
     </form>
+    <div className="preview-wrapper">
+      <Preview />
+      <div className="options">
+        <EditButton />
+      </div>
+    </div>
   </Page>
 );
 
