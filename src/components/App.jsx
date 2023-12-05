@@ -138,8 +138,8 @@ const App = () => (
               />
             </Field>
           </Fields>
-          <AddButton text="Add education" />
         </Card>
+        <AddButton text="Add education" />
       </Tab>
       <NavButtons>
         <NextButton />
