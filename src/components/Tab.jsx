@@ -1,5 +1,7 @@
-const Tab = ({ title, className, children }) => (
-  <article className={`tab ${className}`}>
+const Tab = ({ title, className, isActive, children }) => (
+  <article
+    className={isActive ? `tab ${className} active` : `tab ${className}`}
+  >
     <h2>{title}</h2>
     {children}
   </article>

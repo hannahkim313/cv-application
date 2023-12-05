@@ -1,5 +1,7 @@
 import Button from './Button';
 
-const PreviousButton = () => <Button text="Previous" />;
+const PreviousButton = ({ onClick }) => (
+  <Button text="Previous" onClick={onClick} />
+);
 
 export default PreviousButton;
