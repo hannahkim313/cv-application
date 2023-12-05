@@ -68,6 +68,10 @@ main {
 /******************************************************************************/
 
 form {
+  display: none;
+}
+
+form.active {
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0px 5px 55px var(--color-neutral-2);

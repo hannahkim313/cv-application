@@ -15,7 +15,7 @@ import '../styles/main.css';
 
 const App = () => (
   <Page>
-    <form action="" method="post">
+    <form action="" method="post" className="active">
       <Tab title="Personal Details" className="personal-details active">
         <Fields>
           <Field>
