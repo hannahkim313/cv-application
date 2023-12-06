@@ -1,5 +1,7 @@
 import Button from './Button';
 
-const SubmitButton = () => <Button text="Submit" className="submit" />;
+const SubmitButton = ({ onClick }) => (
+  <Button text="Submit" className="submit" onClick={onClick} />
+);
 
 export default SubmitButton;
