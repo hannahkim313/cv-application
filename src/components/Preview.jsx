@@ -1,6 +1,6 @@
 import EditButton from './EditButton';
 
-const Preview = ({ isPageActive }) => (
+const Preview = ({ isPageActive, setActivePageIndex, setActiveTabIndex }) => (
   <div className={isPageActive ? 'preview-wrapper active' : 'preview-wrapper'}>
     <article className="preview">
       <h2>Preview</h2>
@@ -90,7 +90,12 @@ const Preview = ({ isPageActive }) => (
       </div>
     </article>
     <div className="options">
-      <EditButton />
+      <EditButton
+        onClick={() => {
+          setActivePageIndex(0);
+          setActiveTabIndex(0);
+        }}
+      />
     </div>
   </div>
 );

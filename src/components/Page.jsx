@@ -18,7 +18,11 @@ const Page = () => {
           activeTabIndex={activeTabIndex}
           setActiveTabIndex={setActiveTabIndex}
         />
-        <Preview isPageActive={activePageIndex === 1} />
+        <Preview
+          isPageActive={activePageIndex === 1}
+          setActivePageIndex={setActivePageIndex}
+          setActiveTabIndex={setActiveTabIndex}
+        />
       </main>
       <footer>
         <a href="https://github.com/hannahkim313">Created by Hannah Kim</a>
