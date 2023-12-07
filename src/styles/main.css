@@ -102,23 +102,8 @@ h2 {
   gap: 2rem;
 }
 
-.card > :first-child {
-  display: flex;
-  justify-content: space-between;
-}
-
-.expand-more {
-  background-color: var(--color-text-1-inverted);
-  border-radius: 0.5rem;
-  transition: background-color 0.2s ease;
-}
-
-.expand-more:hover {
-  background-color: var(--color-neutral-1);
-}
-
-.expand-more img {
-  width: 1.5rem;
+.card .active {
+  display: initial;
 }
 
 fieldset {
@@ -279,12 +264,13 @@ textarea:focus-visible {
 /******************************************************************************/
 
 .preview .personal-details {
-  word-break: break-all;
   align-items: center;
 }
 
-.preview .name {
+.preview .full-name {
   font-size: 1.3rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .preview .contact {

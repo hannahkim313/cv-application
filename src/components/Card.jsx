@@ -1,10 +1,7 @@
-import ExpandMoreButton from './ExpandMoreButton';
-
 const Card = ({ title, children }) => (
-  <div className="card">
+  <div className="card" data-index={title.split(' ')[1]}>
     <div>
       <h3>{title}</h3>
-      <ExpandMoreButton />
     </div>
     {children}
   </div>

@@ -1,25 +1,28 @@
 import EditButton from './EditButton';
 
-const Preview = ({ isPageActive, setActivePageIndex, setActiveTabIndex }) => (
+const Preview = ({
+  isPageActive,
+  setActivePageIndex,
+  setActiveTabIndex,
+  handleUpdateValue,
+}) => (
   <div className={isPageActive ? 'preview-wrapper active' : 'preview-wrapper'}>
     <article className="preview">
       <h2>Preview</h2>
       <div className="sections">
         <div className="section personal-details">
-          <p className="name">John Doe</p>
+          <div className="full-name">
+            <p>{handleUpdateValue('firstName')}</p>
+            <p>{handleUpdateValue('lastName')}</p>
+          </div>
           <div className="contact">
-            <p>johndoe@gmail.com</p>
-            <p>123-456-7890</p>
+            <p>{handleUpdateValue('email')}</p>
+            <p>{handleUpdateValue('phoneNumber')}</p>
           </div>
           <div className="divider" />
           <div className="summary">
             <p className="section-title">Summary</p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              laborum magnam unde corrupti, aliquid eius minus! Omnis commodi
-              doloremque distinctio, sed veniam accusantium iusto voluptatibus
-              atque, labore praesentium eum totam?
-            </p>
+            <p>{handleUpdateValue('summary')}</p>
           </div>
         </div>
         <div className="section experience">
@@ -27,45 +30,30 @@ const Preview = ({ isPageActive, setActivePageIndex, setActiveTabIndex }) => (
           <div className="divider" />
           <div>
             <div className="details">
-              <p className="bold">Company name</p>
-              <p className="bold">Start date - End date</p>
+              <p className="bold">{handleUpdateValue('employer1')}</p>
+              <p className="bold">{`${handleUpdateValue(
+                'startDate1'
+              )} - ${handleUpdateValue('endDate1')}`}</p>
             </div>
-            <p className="bold">Job title</p>
+            <p className="bold">{handleUpdateValue('jobTitle1')}</p>
             <ul>
-              <li>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus, similique.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente, nulla.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-                voluptatem.
-              </li>
+              <li>{handleUpdateValue('responsibility1a')}</li>
+              <li>{handleUpdateValue('responsibility2a')}</li>
+              <li>{handleUpdateValue('responsibility3a')}</li>
             </ul>
           </div>
           <div>
             <div className="details">
-              <p className="bold">Company name</p>
-              <p className="bold">Start date - End date</p>
+              <p className="bold">{handleUpdateValue('employer2')}</p>
+              <p className="bold">{`${handleUpdateValue(
+                'startDate2'
+              )} - ${handleUpdateValue('endDate2')}`}</p>
             </div>
-            <p className="bold">Job title</p>
+            <p className="bold">{handleUpdateValue('jobTitle2')}</p>
             <ul>
-              <li>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-                voluptatem?
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptates hic fugit laudantium illo temporibus sequi sapiente
-                alias magnam officia officiis!
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                suscipit?
-              </li>
+              <li>{handleUpdateValue('responsibility1b')}</li>
+              <li>{handleUpdateValue('responsibility2b')}</li>
+              <li>{handleUpdateValue('responsibility3b')}</li>
             </ul>
           </div>
         </div>
@@ -74,17 +62,17 @@ const Preview = ({ isPageActive, setActivePageIndex, setActiveTabIndex }) => (
           <div className="divider" />
           <div>
             <div className="details">
-              <p>School name</p>
-              <p>Grad date</p>
+              <p>{handleUpdateValue('school1')}</p>
+              <p>{handleUpdateValue('gradDate1')}</p>
             </div>
-            <p className="bold">Title of study</p>
+            <p className="bold">{handleUpdateValue('fieldOfStudy1')}</p>
           </div>
           <div>
             <div className="details">
-              <p>School name</p>
-              <p>Grad date</p>
+              <p>{handleUpdateValue('school2')}</p>
+              <p>{handleUpdateValue('gradDate2')}</p>
             </div>
-            <p className="bold">Title of study</p>
+            <p className="bold">{handleUpdateValue('fieldOfStudy2')}</p>
           </div>
         </div>
       </div>
