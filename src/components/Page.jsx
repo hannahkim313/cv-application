@@ -4,8 +4,6 @@ import Preview from './Preview';
 import Form from './Form';
 
 const Page = () => {
-  const [activePageIndex, setActivePageIndex] = useState(0);
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [inputData, setInputData] = useState({
     currId: '',
     firstName: '',
@@ -15,7 +13,7 @@ const Page = () => {
     summary: '',
     employer1: '',
     jobTitle1: '',
-    startData1: '',
+    startDate1: '',
     endDate1: '',
     responsibility1a: '',
     responsibility2a: '',
@@ -25,7 +23,7 @@ const Page = () => {
     gradDate1: '',
     employer2: '',
     jobTitle2: '',
-    startData2: '',
+    startDate2: '',
     endDate2: '',
     responsibility1b: '',
     responsibility2b: '',
@@ -46,6 +44,9 @@ const Page = () => {
   };
 
   const handleUpdateValue = (key) => inputData[key];
+
+  const [activePageIndex, setActivePageIndex] = useState(0);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   return (
     <>

@@ -39,12 +39,7 @@ const Form = ({
             text="Phone number"
             subText="Format: 123-456-7890"
           />
-          <Input
-            type="tel"
-            id="phone-number"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            onChange={handleChange}
-          />
+          <Input type="tel" id="phone-number" onChange={handleChange} />
         </Field>
         <Field>
           <Label
@@ -52,12 +47,7 @@ const Form = ({
             text="Email address"
             subText="Format: johndoe@gmail.com"
           />
-          <Input
-            type="email"
-            id="email"
-            pattern=".+@example\.com"
-            onChange={handleChange}
-          />
+          <Input type="email" id="email" onChange={handleChange} />
         </Field>
       </Fields>
       <Field>
@@ -68,7 +58,6 @@ const Form = ({
           rows="5"
           cols="30"
           onChange={handleChange}
-          required
         />
       </Field>
       <NavButtons>
@@ -98,12 +87,7 @@ const Form = ({
               text="Start date"
               subText="Format: M/YYYY or MM/YYYY"
             />
-            <Input
-              type="text"
-              id="start-date1"
-              pattern="(?:^|[^\/\d])\K(?:0?[1-9]|1[0-2])\/\d{4}\b"
-              onChange={handleChange}
-            />
+            <Input type="text" id="start-date1" onChange={handleChange} />
           </Field>
           <Field>
             <Label
@@ -111,12 +95,7 @@ const Form = ({
               text="End date"
               subText="Format: M/YYYY or MM/YYYY"
             />
-            <Input
-              type="text"
-              id="end-date1"
-              pattern="(?:^|[^\/\d])\K(?:0?[1-9]|1[0-2])\/\d{4}\b"
-              onChange={handleChange}
-            />
+            <Input type="text" id="end-date1" onChange={handleChange} />
           </Field>
         </Fields>
         <fieldset>
@@ -153,12 +132,7 @@ const Form = ({
               text="Start date"
               subText="Format: M/YYYY or MM/YYYY"
             />
-            <Input
-              type="text"
-              id="start-date2"
-              pattern="(?:^|[^\/\d])\K(?:0?[1-9]|1[0-2])\/\d{4}\b"
-              onChange={handleChange}
-            />
+            <Input type="text" id="start-date2" onChange={handleChange} />
           </Field>
           <Field>
             <Label
@@ -166,12 +140,7 @@ const Form = ({
               text="End date"
               subText="Format: M/YYYY or MM/YYYY"
             />
-            <Input
-              type="text"
-              id="end-date2"
-              pattern="(?:^|[^\/\d])\K(?:0?[1-9]|1[0-2])\/\d{4}\b"
-              onChange={handleChange}
-            />
+            <Input type="text" id="end-date2" onChange={handleChange} />
           </Field>
         </Fields>
         <fieldset>
@@ -218,12 +187,7 @@ const Form = ({
               text="Graduation date"
               subText="Format: M/YYYY or MM/YYYY"
             />
-            <Input
-              type="text"
-              id="grad-date1"
-              pattern="(?:^|[^\/\d])\K(?:0?[1-9]|1[0-2])\/\d{4}\b"
-              onChange={handleChange}
-            />
+            <Input type="text" id="grad-date1" onChange={handleChange} />
           </Field>
         </Fields>
       </Card>
@@ -245,12 +209,7 @@ const Form = ({
               text="Graduation date"
               subText="Format: M/YYYY or MM/YYYY"
             />
-            <Input
-              type="text"
-              id="grad-date2"
-              pattern="(?:^|[^\/\d])\K(?:0?[1-9]|1[0-2])\/\d{4}\b"
-              onChange={handleChange}
-            />
+            <Input type="text" id="grad-date2" onChange={handleChange} />
           </Field>
         </Fields>
       </Card>

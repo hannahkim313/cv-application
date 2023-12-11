@@ -1,12 +1,11 @@
-const Input = ({ type, id, pattern, onChange }) => (
+const Input = ({ type, id, className, onChange }) => (
   <input
     type={type}
     name={id}
     id={id}
-    pattern={pattern}
+    className={className}
     autoComplete="off"
     onChange={onChange}
-    required
   />
 );
 
