@@ -1,5 +1,7 @@
 # CV Builder
 
+https://cv-application-30c.pages.dev/
+
 ## Project Summary
 
 This project exercise, created by The Odin Project, is a CV builder to practice working with components and states using React.
