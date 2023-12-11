@@ -206,7 +206,7 @@ textarea:focus-visible {
 }
 
 .preview-wrapper.active {
-  min-width: 100%;
+  width: clamp(8.5in, 100%, 850px);
   max-width: 850px;
   display: flex;
   flex-direction: column;
